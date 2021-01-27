@@ -210,6 +210,32 @@ def serverSix():
 
 			print(6)
 
+def serverSeven():
+	with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sc1:
+		sc1.connect((HOST7, PORT1))
+		
+		x = 1
+		while x < 6:
+			#recive data from server A
+			data1 = sc1.recv(1024)
+
+			strval1 = str(data1.decode("utf-8"))
+
+			a,b,c,d,e,f = strval1.split("+")
+
+			inserted_values = (
+        		a,
+        		b,
+        		c,
+        		d,
+        		e,
+        		f
+    		)
+
+			cursor.execute(" INSERT INTO s07m7(dtime, cb_ctrl, cb_res, f_res, tap, v_res) VALUES (%s,%s,%s,%s,%s,%s)", inserted_values)
+
+
+			print(7)
 
 # Create two threads as follows
 try:
@@ -219,6 +245,7 @@ try:
    _thread.start_new_thread( serverFour, ( ) )
    _thread.start_new_thread( serverFive, ( ) )
    _thread.start_new_thread( serverSix, ( ) )
+   _thread.start_new_thread( serverSeven, ( ) )
 
 except:
    print ("Error: unable to start thread")
