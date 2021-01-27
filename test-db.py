@@ -22,4 +22,4 @@ conn = psycopg2.connect(host="131.180.165.5",database="crpg", user="postgres", p
 conn.autocommit = True
 cursor = conn.cursor()
 db_version = cursor.execute('SELECT version()')
-print(db _version)
+print(db_version)
