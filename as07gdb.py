@@ -75,7 +75,14 @@ def serverTwo():
         		d,
         		e,
         		f,
-        		g
+        		g,
+                h,
+                i,
+                j,
+                k,
+                l,
+                m,
+                n
     		)
 
 			cursor.execute(" INSERT INTO s07m2(dtime, cb_ctrl, cb_res, f_res, hv_p_res, hv_q_res, ld_res, lv_p_res, lv_q_res, tap, tap_ctrl, tap_mode, tap_res, v_res) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", inserted_values)
