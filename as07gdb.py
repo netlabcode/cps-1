@@ -62,8 +62,8 @@ def serverTwo():
 			data1 = sc1.recv(1024)
 
 			strval1 = str(data1.decode("utf-8"))
-
-            """
+            
+        """
 			a,b,c,d,e,f,g = strval1.split("+")
 
 			inserted_values = (
@@ -77,7 +77,7 @@ def serverTwo():
     		)
 
 			cursor.execute(" INSERT INTO s06m2(dtime, cb_ctrl, cb_res, i_res, p_res, q_res, v_res) VALUES (%s,%s,%s,%s,%s,%s,%s)", inserted_values)
-            """
+        """
 
 			print(strval1)
 
@@ -93,7 +93,7 @@ def serverThree():
 
 			strval1 = str(data1.decode("utf-8"))
 
-            """
+        """
 			a,b,c,d,e,f,g,h,i,j,k,l,m,n = strval1.split("+")
 
 			inserted_values = (
@@ -114,7 +114,7 @@ def serverThree():
     		)
 
 			cursor.execute(" INSERT INTO s06m3(dtime, v_res, cb_ctrl, cb_res, ld_res, f_res, hv_p_res, hv_q_res, lv_p_res, lv_q_res, tr_tap, tr_tap_ctrl, tr_tap_mode, tr_tap_res) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", inserted_values)
-            """
+        """
 
 			print(strval1)
 
@@ -128,8 +128,8 @@ def serverFour():
 			data1 = sc1.recv(1024)
 
 			strval1 = str(data1.decode("utf-8"))
-
-            """
+            
+        """
 			a,b,c,d,e,f,g = strval1.split("+")
 
 			inserted_values = (
@@ -143,7 +143,7 @@ def serverFour():
     		)
 
 			cursor.execute(" INSERT INTO s06m4(dtime, cb_ctrl, cb_res, i_res, p_res, q_res, v_res) VALUES (%s,%s,%s,%s,%s,%s,%s)", inserted_values)
-            """
+        """
 
 			print(strval1)
 
@@ -157,8 +157,9 @@ def serverFive():
 			data1 = sc1.recv(1024)
 
 			strval1 = str(data1.decode("utf-8"))
-
-            """
+            
+            
+        """
 			a,b,c= strval1.split("+")
 
 			inserted_values = (
@@ -168,7 +169,7 @@ def serverFive():
     		)
 
 			cursor.execute(" INSERT INTO s06m5(dtime, cb_ctrl, cb_res) VALUES (%s,%s,%s)", inserted_values)
-            """
+        """
 			print(strval1)
 
 def serverSix():
@@ -181,7 +182,8 @@ def serverSix():
 			data1 = sc1.recv(1024)
 
 			strval1 = str(data1.decode("utf-8"))
-            """
+        
+        """
 			a,b,c,d,e,f,g,h,i,j= strval1.split("+")
 
 			inserted_values = (
@@ -198,7 +200,7 @@ def serverSix():
     		)
 
 			cursor.execute(" INSERT INTO s06m6(dtime, cb_ctrl, cb_res, ld_res, p_ctrl, p_res, q_res, v_ctrl, v_res, f_res) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", inserted_values)
-            """
+        """
 			print(strval1)
 
 
