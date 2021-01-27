@@ -170,7 +170,7 @@ def serverFive():
 			strval1 = str(data1.decode("utf-8"))
             
             
-			"""a,b,c= strval1.split("+")
+			a,b,c= strval1.split("+")
 
 			inserted_values = (
         		a,
@@ -178,9 +178,9 @@ def serverFive():
         		c
     		)
 
-			cursor.execute(" INSERT INTO s06m5(dtime, cb_ctrl, cb_res) VALUES (%s,%s,%s)", inserted_values)
-        """
-			#print(strval1)
+			cursor.execute(" INSERT INTO s07m5(dtime, cb_ctrl, cb_res) VALUES (%s,%s,%s)", inserted_values)
+        
+			print(5)
 
 def serverSix():
 	with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sc1:
@@ -193,7 +193,7 @@ def serverSix():
 
 			strval1 = str(data1.decode("utf-8"))
         
-			"""a,b,c,d,e,f,g,h,i,j= strval1.split("+")
+			a,b,c,d,e,f,g,h= strval1.split("+")
 
 			inserted_values = (
         		a,
@@ -203,14 +203,12 @@ def serverSix():
         		e,
         		f,
         		g,
-        		h,
-        		i,
-        		j
+        		h
     		)
 
-			cursor.execute(" INSERT INTO s06m6(dtime, cb_ctrl, cb_res, ld_res, p_ctrl, p_res, q_res, v_ctrl, v_res, f_res) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", inserted_values)
-        """
-			#print(strval1)
+			cursor.execute(" INSERT INTO s07m6(dtime, cb_ctrl, cb_res, f_res, i_res, p_res, q_res, v_res) VALUES (%s,%s,%s,%s,%s,%s,%s,%s)", inserted_values)
+
+			print(6)
 
 
 # Create two threads as follows
