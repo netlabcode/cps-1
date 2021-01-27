@@ -102,7 +102,7 @@ def serverThree():
 
 			strval1 = str(data1.decode("utf-8"))
 
-			"""a,b,c,d,e,f,g,h,i,j,k,l,m,n = strval1.split("+")
+			a,b,c,d,e,f,g,h,i,j,k,l,m,n = strval1.split("+")
 
 			inserted_values = (
         		a,
@@ -112,19 +112,19 @@ def serverThree():
         		e,
         		f,
         		g,
-        		h,
-        		i,
-        		j,
-        		k,
-        		l,
-        		m,
-        		n
+                h,
+                i,
+                j,
+                k,
+                l,
+                m,
+                n
     		)
 
-			cursor.execute(" INSERT INTO s06m3(dtime, v_res, cb_ctrl, cb_res, ld_res, f_res, hv_p_res, hv_q_res, lv_p_res, lv_q_res, tr_tap, tr_tap_ctrl, tr_tap_mode, tr_tap_res) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", inserted_values)
-        """
+			cursor.execute(" INSERT INTO s07m3(dtime, cb_ctrl, cb_res, f_res, hv_p_res, hv_q_res, ld_res, lv_p_res, lv_q_res, tap, tap_ctrl, tap_mode, tap_res, v_res) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", inserted_values)
 
-			#print(strval1)
+
+			print(strval1)
 
 def serverFour():
 	with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sc1:
