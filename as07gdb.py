@@ -11,6 +11,10 @@ HOST3 = '100.7.0.13'
 HOST4 = '100.7.0.14'
 HOST5 = '100.7.0.15'
 HOST6 = '100.7.0.16'
+HOST7 = '100.7.0.17'
+HOST8 = '100.7.0.18'
+HOST9 = '100.7.0.19'
+HOST10 = '100.7.0.10'
 PORT1 = 993
 PORT2 = 994
 PORTS1 = 881
@@ -62,7 +66,7 @@ def serverTwo():
 
 			strval1 = str(data1.decode("utf-8"))
             
-			"""a,b,c,d,e,f,g = strval1.split("+")
+			a,b,c,d,e,f,g,h,i,j,k,l,m,n = strval1.split("+")
 
 			inserted_values = (
         		a,
@@ -74,10 +78,10 @@ def serverTwo():
         		g
     		)
 
-			cursor.execute(" INSERT INTO s06m2(dtime, cb_ctrl, cb_res, i_res, p_res, q_res, v_res) VALUES (%s,%s,%s,%s,%s,%s,%s)", inserted_values)
-        """
+			cursor.execute(" INSERT INTO s07m2(dtime, cb_ctrl, cb_res, f_res, hv_p_res, hv_q_res, ld_res, lv_p_res, lv_q_res, tap, tap_ctrl, tap_mode, tap_res, v_res) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", inserted_values)
 
-			#print(strval1)
+
+			print(strval1)
 
 
 def serverThree():
