@@ -22,9 +22,9 @@ client.connect()
 print("connected to OPC UA Server")
 val1 = client.get_node("ns=2;i=296")
 val2 = client.get_node("ns=2;i=297")
-val3 = client.get_node("ns=2;i=300")
-val4 = client.get_node("ns=2;i=298")
-val5 = client.get_node("ns=2;i=299")
+val3 = client.get_node("ns=2;i=298")
+val4 = client.get_node("ns=2;i=299")
+val5 = client.get_node("ns=2;i=300")
 val6 = client.get_node("ns=2;i=301")
 val7 = client.get_node("ns=2;i=302")
 val8 = client.get_node("ns=2;i=303")
@@ -153,15 +153,15 @@ def serverTwo():
 					elif check == 297:
 						val2.set_value(value, ua.VariantType.Int16)
 						print('Value 297 set to:',value)
-					elif check == 300:
-						val3.set_value(value, ua.VariantType.Float)
-						print('Value 300 set to:',value)
 					elif check == 298:
-						val4.set_value(value, ua.VariantType.Float)
+						val3.set_value(value, ua.VariantType.Float)
 						print('Value 298 set to:',value)
 					elif check == 299:
-						val5.set_value(value, ua.VariantType.Float)
+						val4.set_value(value, ua.VariantType.Float)
 						print('Value 299 set to:',value)
+					elif check == 300:
+						val5.set_value(value, ua.VariantType.Float)
+						print('Value 300 set to:',value)
 					elif check == 301:
 						val6.set_value(value, ua.VariantType.Float)
 						print('Value 301 set to:',value)
@@ -210,15 +210,15 @@ def serverTwoCC():
 					elif check == 297:
 						val2.set_value(value, ua.VariantType.Int16)
 						print('Value 297 set to:',value)
-					elif check == 300:
-						val3.set_value(value, ua.VariantType.Float)
-						print('Value 300 set to:',value)
 					elif check == 298:
-						val4.set_value(value, ua.VariantType.Float)
+						val3.set_value(value, ua.VariantType.Float)
 						print('Value 298 set to:',value)
 					elif check == 299:
-						val5.set_value(value, ua.VariantType.Float)
+						val4.set_value(value, ua.VariantType.Float)
 						print('Value 299 set to:',value)
+					elif check == 300:
+						val5.set_value(value, ua.VariantType.Float)
+						print('Value 300 set to:',value)
 					elif check == 301:
 						val6.set_value(value, ua.VariantType.Float)
 						print('Value 301 set to:',value)

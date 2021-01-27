@@ -22,9 +22,9 @@ client.connect()
 print("connected to OPC UA Server")
 val1 = client.get_node("ns=2;i=315")
 val2 = client.get_node("ns=2;i=316")
-val3 = client.get_node("ns=2;i=319")
-val4 = client.get_node("ns=2;i=317")
-val5 = client.get_node("ns=2;i=318")
+val3 = client.get_node("ns=2;i=317")
+val4 = client.get_node("ns=2;i=318")
+val5 = client.get_node("ns=2;i=319")
 
 # Define a function for the thread
 def serverOne():
@@ -137,15 +137,15 @@ def serverTwo():
 					elif check == 316:
 						val2.set_value(value, ua.VariantType.Int16)
 						print('Value 316 set to:',value)
-					elif check == 319:
-						val3.set_value(value, ua.VariantType.Float)
-						print('Value 319 set to:',value)
 					elif check == 317:
-						val4.set_value(value, ua.VariantType.Float)
+						val3.set_value(value, ua.VariantType.Float)
 						print('Value 317 set to:',value)
 					elif check == 318:
-						val5.set_value(value, ua.VariantType.Int16)
+						val4.set_value(value, ua.VariantType.Int16)
 						print('Value 318 set to:',value)
+					elif check == 319:
+						val5.set_value(value, ua.VariantType.Float)
+						print('Value 319 set to:',value)
 					else:
 							print(".")
 
@@ -179,15 +179,15 @@ def serverTwoCC():
 					elif check == 316:
 						val2.set_value(value, ua.VariantType.Int16)
 						print('Value 316 set to:',value)
-					elif check == 319:
-						val3.set_value(value, ua.VariantType.Float)
-						print('Value 319 set to:',value)
 					elif check == 317:
-						val4.set_value(value, ua.VariantType.Float)
+						val3.set_value(value, ua.VariantType.Float)
 						print('Value 317 set to:',value)
 					elif check == 318:
-						val5.set_value(value, ua.VariantType.Int16)
+						val4.set_value(value, ua.VariantType.Int16)
 						print('Value 318 set to:',value)
+					elif check == 319:
+						val5.set_value(value, ua.VariantType.Float)
+						print('Value 319 set to:',value)
 					else:
 							print(".")
 				except Exception:
