@@ -137,7 +137,7 @@ def serverFour():
 
 			strval1 = str(data1.decode("utf-8"))
             
-			"""a,b,c,d,e,f,g = strval1.split("+")
+			a,b,c,d,e,f,g,h,i,j,k = strval1.split("+")
 
 			inserted_values = (
         		a,
@@ -146,13 +146,17 @@ def serverFour():
         		d,
         		e,
         		f,
-        		g
+        		g,
+                h,
+                i,
+                j,
+                k
     		)
 
-			cursor.execute(" INSERT INTO s06m4(dtime, cb_ctrl, cb_res, i_res, p_res, q_res, v_res) VALUES (%s,%s,%s,%s,%s,%s,%s)", inserted_values)
-        """
+			cursor.execute(" INSERT INTO s07m3(dtime, cb_ctrl, cb_res, hv_p_res, hv_q_res, ld_res, lv_p_res, lv_q_res, tap_ctrl, tap_mode, tap_res) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", inserted_values)
 
-			#print(strval1)
+
+			print(strval1)
 
 def serverFive():
 	with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sc1:
