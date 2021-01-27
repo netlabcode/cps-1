@@ -34,8 +34,7 @@ def serverOne():
 
 			strval1 = str(data1.decode("utf-8"))
 
-            """
-			a,b,c,d,e,f,g = strval1.split("+")
+			"""a,b,c,d,e,f,g = strval1.split("+")
 
 			inserted_values = (
         		a,
@@ -63,8 +62,7 @@ def serverTwo():
 
 			strval1 = str(data1.decode("utf-8"))
             
-        """
-			a,b,c,d,e,f,g = strval1.split("+")
+			"""a,b,c,d,e,f,g = strval1.split("+")
 
 			inserted_values = (
         		a,
@@ -93,8 +91,7 @@ def serverThree():
 
 			strval1 = str(data1.decode("utf-8"))
 
-        """
-			a,b,c,d,e,f,g,h,i,j,k,l,m,n = strval1.split("+")
+			"""a,b,c,d,e,f,g,h,i,j,k,l,m,n = strval1.split("+")
 
 			inserted_values = (
         		a,
@@ -129,8 +126,7 @@ def serverFour():
 
 			strval1 = str(data1.decode("utf-8"))
             
-        """
-			a,b,c,d,e,f,g = strval1.split("+")
+			"""a,b,c,d,e,f,g = strval1.split("+")
 
 			inserted_values = (
         		a,
@@ -159,8 +155,7 @@ def serverFive():
 			strval1 = str(data1.decode("utf-8"))
             
             
-        """
-			a,b,c= strval1.split("+")
+			"""a,b,c= strval1.split("+")
 
 			inserted_values = (
         		a,
@@ -183,8 +178,7 @@ def serverSix():
 
 			strval1 = str(data1.decode("utf-8"))
         
-        """
-			a,b,c,d,e,f,g,h,i,j= strval1.split("+")
+			"""a,b,c,d,e,f,g,h,i,j= strval1.split("+")
 
 			inserted_values = (
         		a,
