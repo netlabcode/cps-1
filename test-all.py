@@ -69,10 +69,6 @@ def emptyNet():
     s22 = net.addSwitch( 's22' )
     s23 = net.addSwitch( 's23' )
 
-    #Add Host on Control Center
-    ccdb = net.addHost('ccdb', ip='100.0.0.11')
-    cctl = net.addHost('ccdb', ip='100.0.0.12')
-
     #Add Hosts on Substation 6
     s06m1 = net.addHost('s06m1', ip='100.6.0.11', cls=CPULimitedHost, cpu=.1, mac='00:00:00:00:00:01')
     s06m2 = net.addHost('s06m2', ip='100.6.0.12', cls=CPULimitedHost, cpu=.1, mac='00:00:00:00:00:02')
@@ -83,7 +79,6 @@ def emptyNet():
     s06cpc = net.addHost('s06cpc', ip='100.6.0.21', mac='00:00:00:00:00:0a')
     s06db = net.addHost('s06db', ip='100.6.0.22', mac='00:00:00:00:00:0b')
     s06gw = net.addHost('s06gw', ip='100.6.0.23', mac='00:00:00:00:00:0c')
-    hacker = net.addHost('hacker', ip='100.6.0.99', mac='00:00:00:00:00:0f')
 
     #Add Hosts on Substation 7
     s07m1 = net.addHost('s07m1', ip='100.7.0.11', cls=CPULimitedHost, cpu=.1)
@@ -195,10 +190,6 @@ def emptyNet():
     net.addLink(s51,s999)
     """
 
-    # Link Control Center to Switch
-    net.addLink(ccdb,s999, intfName1='ccdb-eth1', params1={'ip':'100.0.0.11/24'})
-    net.addLink(cctl,s999, intfName1='cctl-eth1', params1={'ip':'100.0.0.12/24'})
-
     # Link Substation 06 Merging unit to Switch
     net.addLink(s06m1,s63, intfName1='s06m1-eth1', params1={'ip':'100.6.0.11/24'}, cls=TCLink, bw=0.01 )
     net.addLink(s06m2,s63, intfName1='s06m2-eth1', params1={'ip':'100.6.0.12/24'}, cls=TCLink, bw=0.01 )
@@ -209,7 +200,6 @@ def emptyNet():
     net.addLink(s06cpc,s62)
     net.addLink(s06db,s62)
     net.addLink(s06gw,s61, intfName1='s06gw-eth1', params1={'ip':'100.6.0.23/24'})
-    net.addLink(hacker,s61)
 
     # Link Substation 07 Merging unit to Switch
     net.addLink(s07m1,s73, intfName1='s07m1-eth1', params1={'ip':'100.7.0.11/24'})
@@ -281,10 +271,6 @@ def emptyNet():
     net.addLink(s05gw,s51, intfName1='s05gw-eth1', params1={'ip':'100.5.0.23/24'})
 
     """
-
-    # Link Host Control Center to External gateway
-    net.addLink(ccdb,s777, intfName1='ccdb-eth0', params1={'ip':'10.0.0.11/16'})
-    net.addLink(cctl,s777, intfName1='cctl-eth0', params1={'ip':'10.0.0.12/16'})
 
     # Link Host Substation 6 to switch to external gateway
     net.addLink(s06m1,s777, intfName1='s06m1-eth0', params1={'ip':'10.0.6.11/16'})
