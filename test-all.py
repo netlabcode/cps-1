@@ -100,11 +100,6 @@ def emptyNet():
 
     #Add Host on Substaion 1
     s01m1 = net.addHost('s01m1', ip='100.1.0.11', cls=CPULimitedHost, cpu=.1)
-    s01m2 = net.addHost('s01m2', ip='100.1.0.12', cls=CPULimitedHost, cpu=.1)
-    s01m3 = net.addHost('s01m3', ip='100.1.0.13', cls=CPULimitedHost, cpu=.1)
-    s01m4 = net.addHost('s01m4', ip='100.1.0.14', cls=CPULimitedHost, cpu=.1)
-    s01m5 = net.addHost('s01m5', ip='100.1.0.15', cls=CPULimitedHost, cpu=.1)
-    s01m6 = net.addHost('s01m6', ip='100.1.0.16', cls=CPULimitedHost, cpu=.1)
     s01cpc = net.addHost('s01cpc', ip='100.1.0.21')
     s01db = net.addHost('s01db', ip='100.1.0.22')
     s01gw = net.addHost('s01gw', ip='100.1.0.23')
@@ -234,11 +229,6 @@ def emptyNet():
 
     # Link Substation 01 Merging unit to Switch
     net.addLink(s01m1,s13, intfName1='s01m1-eth1', params1={'ip':'100.1.0.11/24'})
-    net.addLink(s01m2,s13, intfName1='s01m2-eth1', params1={'ip':'100.1.0.12/24'})
-    net.addLink(s01m3,s13, intfName1='s01m3-eth1', params1={'ip':'100.1.0.13/24'})
-    net.addLink(s01m4,s13, intfName1='s01m4-eth1', params1={'ip':'100.1.0.14/24'})
-    net.addLink(s01m5,s13, intfName1='s01m5-eth1', params1={'ip':'100.1.0.15/24'})
-    net.addLink(s01m6,s13, intfName1='s01m6-eth1', params1={'ip':'100.1.0.16/24'})
     net.addLink(s01cpc,s12)
     net.addLink(s01db,s12)
     net.addLink(s01gw,s11, intfName1='s01gw-eth1', params1={'ip':'100.1.0.23/24'})
@@ -316,11 +306,6 @@ def emptyNet():
 
     # Link Host Substation 1 to switch to external gateway
     net.addLink(s01m1,s777, intfName1='s01m1-eth0', params1={'ip':'10.0.1.11/16'})
-    net.addLink(s01m2,s777, intfName1='s01m2-eth0', params1={'ip':'10.0.1.12/16'})
-    net.addLink(s01m3,s777, intfName1='s01m3-eth0', params1={'ip':'10.0.1.13/16'})
-    net.addLink(s01m4,s777, intfName1='s01m4-eth0', params1={'ip':'10.0.1.14/16'})
-    net.addLink(s01m5,s777, intfName1='s01m5-eth0', params1={'ip':'10.0.1.15/16'})
-    net.addLink(s01m6,s777, intfName1='s01m6-eth0', params1={'ip':'10.0.1.16/16'})
     net.addLink(s01gw,s777, intfName1='s01gw-eth0', params1={'ip':'10.0.1.23/16'})
 
     """
