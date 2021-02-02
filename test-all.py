@@ -44,6 +44,8 @@ def emptyNet():
     s11 = net.addSwitch( 's11' )
     s12 = net.addSwitch( 's12' )
     s13 = net.addSwitch( 's13' )
+
+    """
     s31 = net.addSwitch( 's31' )
     s32 = net.addSwitch( 's32' )
     s33 = net.addSwitch( 's33' )
@@ -53,6 +55,7 @@ def emptyNet():
     s51 = net.addSwitch( 's51' )
     s52 = net.addSwitch( 's52' )
     s53 = net.addSwitch( 's53' )
+    """
 
     s61 = net.addSwitch( 's61' )
     s62 = net.addSwitch( 's62' )
@@ -117,6 +120,7 @@ def emptyNet():
     s02db = net.addHost('s02db', ip='100.2.0.22')
     s02gw = net.addHost('s02gw', ip='100.2.0.23')
 
+    """
     #Add Hosts on Substation 3
     s03m1 = net.addHost('s03m1', ip='100.3.0.11', cls=CPULimitedHost, cpu=.1)
     s03m2 = net.addHost('s03m2', ip='100.3.0.12', cls=CPULimitedHost, cpu=.1)
@@ -149,6 +153,7 @@ def emptyNet():
     s05cpc = net.addHost('s05cpc', ip='100.5.0.21')
     s05db = net.addHost('s05db', ip='100.5.0.22')
     s05gw = net.addHost('s05gw', ip='100.5.0.23')
+    """
 
     # Link siwtch to switch
     net.addLink(s61,s62)
@@ -161,6 +166,8 @@ def emptyNet():
     net.addLink(s13,s12)
     net.addLink(s11,s12)
     net.addLink(s13,s12)
+
+    """
     net.addLink(s33,s32)
     net.addLink(s31,s32)
     net.addLink(s33,s32)
@@ -170,14 +177,18 @@ def emptyNet():
     net.addLink(s53,s52)
     net.addLink(s51,s52)
     net.addLink(s53,s52)
+    """
 
     net.addLink(s61,s999)
     net.addLink(s71,s999)
     net.addLink(s21,s999)
     net.addLink(s11,s999)
+
+    """
     net.addLink(s31,s999)
     net.addLink(s41,s999)
     net.addLink(s51,s999)
+    """
 
     # Link Control Center to Switch
     net.addLink(ccdb,s999, intfName1='ccdb-eth1', params1={'ip':'100.0.0.11/24'})
@@ -232,6 +243,7 @@ def emptyNet():
     net.addLink(s01db,s12)
     net.addLink(s01gw,s11, intfName1='s01gw-eth1', params1={'ip':'100.1.0.23/24'})
 
+    """
     # Link Substation 03 Merging unit to Switch
     net.addLink(s03m1,s33, intfName1='s03m1-eth1', params1={'ip':'100.3.0.11/24'})
     net.addLink(s03m2,s33, intfName1='s03m2-eth1', params1={'ip':'100.3.0.12/24'})
@@ -264,6 +276,8 @@ def emptyNet():
     net.addLink(s05cpc,s52)
     net.addLink(s05db,s52)
     net.addLink(s05gw,s51, intfName1='s05gw-eth1', params1={'ip':'100.5.0.23/24'})
+
+    """
 
     # Link Host Control Center to External gateway
     net.addLink(ccdb,s777, intfName1='ccdb-eth0', params1={'ip':'10.0.0.11/16'})
@@ -309,6 +323,7 @@ def emptyNet():
     net.addLink(s01m6,s777, intfName1='s01m6-eth0', params1={'ip':'10.0.1.16/16'})
     net.addLink(s01gw,s777, intfName1='s01gw-eth0', params1={'ip':'10.0.1.23/16'})
 
+    """
     # Link Host Substation 3 to switch to external gateway
     net.addLink(s03m1,s777, intfName1='s03m1-eth0', params1={'ip':'10.0.3.11/16'})
     net.addLink(s03m2,s777, intfName1='s03m2-eth0', params1={'ip':'10.0.3.12/16'})
@@ -335,6 +350,7 @@ def emptyNet():
     net.addLink(s05m5,s777, intfName1='s05m5-eth0', params1={'ip':'10.0.5.15/16'})
     net.addLink(s05m6,s777, intfName1='s05m6-eth0', params1={'ip':'10.0.5.16/16'})
     net.addLink(s05gw,s777, intfName1='s05gw-eth0', params1={'ip':'10.0.5.23/16'})
+    """
 
 
     #Build and start Network ============================================================================
