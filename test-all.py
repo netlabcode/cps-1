@@ -104,6 +104,10 @@ def emptyNet():
     s05m4 = net.addHost('s05m4', ip='100.5.0.14', cls=CPULimitedHost, cpu=.1)
     s05m5 = net.addHost('s05m5', ip='100.5.0.15', cls=CPULimitedHost, cpu=.1)
     s05m6 = net.addHost('s05m6', ip='100.5.0.16', cls=CPULimitedHost, cpu=.1)
+    s05m7 = net.addHost('s05m7', ip='100.5.0.17', cls=CPULimitedHost, cpu=.1)
+    s05m8 = net.addHost('s05m8', ip='100.5.0.18', cls=CPULimitedHost, cpu=.1)
+    s05m9 = net.addHost('s05m9', ip='100.5.0.19', cls=CPULimitedHost, cpu=.1)
+    s05m10 = net.addHost('s05m10', ip='100.5.0.20', cls=CPULimitedHost, cpu=.1)
     s05gw = net.addHost('s05gw', ip='100.5.0.23')
 
     """
@@ -243,6 +247,10 @@ def emptyNet():
     net.addLink(s05m4,s53, intfName1='s05m4-eth1', params1={'ip':'100.5.0.14/24'})
     net.addLink(s05m5,s53, intfName1='s05m5-eth1', params1={'ip':'100.5.0.15/24'})
     net.addLink(s05m6,s53, intfName1='s05m6-eth1', params1={'ip':'100.5.0.16/24'})
+    net.addLink(s05m7,s53, intfName1='s05m7-eth1', params1={'ip':'100.5.0.17/24'})
+    net.addLink(s05m8,s53, intfName1='s05m8-eth1', params1={'ip':'100.5.0.18/24'})
+    net.addLink(s05m9,s53, intfName1='s05m9-eth1', params1={'ip':'100.5.0.19/24'})
+    net.addLink(s05m10,s53, intfName1='s05m10-eth1', params1={'ip':'100.5.0.20/24'})
     net.addLink(s05gw,s51, intfName1='s01gw-eth1', params1={'ip':'100.5.0.23/24'})
 
     """
@@ -333,6 +341,10 @@ def emptyNet():
     net.addLink(s05m4,s777, intfName1='s05m4-eth0', params1={'ip':'10.0.5.14/16'})
     net.addLink(s05m5,s777, intfName1='s05m5-eth0', params1={'ip':'10.0.5.15/16'})
     net.addLink(s05m6,s777, intfName1='s05m6-eth0', params1={'ip':'10.0.5.16/16'})
+    net.addLink(s05m7,s777, intfName1='s05m7-eth0', params1={'ip':'10.0.5.17/16'})
+    net.addLink(s05m8,s777, intfName1='s05m8-eth0', params1={'ip':'10.0.5.18/16'})
+    net.addLink(s05m9,s777, intfName1='s05m9-eth0', params1={'ip':'10.0.5.19/16'})
+    net.addLink(s05m10,s777, intfName1='s05m10-eth0', params1={'ip':'10.0.5.20/16'})
     net.addLink(s05gw,s777, intfName1='s05gw-eth0', params1={'ip':'10.0.5.23/16'})
 
     """
@@ -385,7 +397,7 @@ def emptyNet():
     info(os.system('ip addr add 10.0.99.1/16 dev s777'))
     info(os.system('ip link set s777 up'))
 
-    """
+ 
     info( net[ 's06m1' ].cmd( 'python3 as06m1.py &amp' ) )
     info( net[ 's06m2' ].cmd( 'python3 as06m2.py &amp' ) )
     info( net[ 's06m3' ].cmd( 'python3 as06m3.py &amp' ) )
@@ -414,7 +426,18 @@ def emptyNet():
     info( net[ 's02m8' ].cmd( 'python3 as07m8.py &amp' ) )
     info( net[ 's02m9' ].cmd( 'python3 as07m9.py &amp' ) )
     info( net[ 's02m10' ].cmd( 'python3 as07m10.py &amp' ) )
-    """
+
+    info( net[ 's05m1' ].cmd( 'python3 as07m1.py &amp' ) )
+    info( net[ 's05m2' ].cmd( 'python3 as07m2.py &amp' ) )
+    info( net[ 's05m3' ].cmd( 'python3 as07m3.py &amp' ) )
+    info( net[ 's05m4' ].cmd( 'python3 as07m4.py &amp' ) )
+    info( net[ 's05m5' ].cmd( 'python3 as07m5.py &amp' ) )
+    info( net[ 's05m6' ].cmd( 'python3 as07m6.py &amp' ) )
+    info( net[ 's05m7' ].cmd( 'python3 as07m7.py &amp' ) )
+    info( net[ 's05m8' ].cmd( 'python3 as07m8.py &amp' ) )
+    info( net[ 's05m9' ].cmd( 'python3 as07m9.py &amp' ) )
+    info( net[ 's05m10' ].cmd( 'python3 as07m10.py &amp' ) )
+
     
  
     
