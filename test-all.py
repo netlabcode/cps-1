@@ -234,11 +234,13 @@ def emptyNet():
     net.addLink(s02db,s22)
     net.addLink(s02gw,s21, intfName1='s02gw-eth1', params1={'ip':'100.2.0.23/24'})
 
+    """
     # Link Substation 01 Merging unit to Switch
     net.addLink(s01m1,s13, intfName1='s01m1-eth1', params1={'ip':'100.1.0.11/24'})
     net.addLink(s01cpc,s12)
     net.addLink(s01db,s12)
     net.addLink(s01gw,s11, intfName1='s01gw-eth1', params1={'ip':'100.1.0.23/24'})
+    """
 
     """
     # Link Substation 03 Merging unit to Switch
