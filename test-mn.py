@@ -171,6 +171,9 @@ def emptyNet():
     nat = net.get('nat0')
     nat.cmdPrint('ip link set mtu 1454 dev nat0-eth0')
 
+    info(os.system('ip addr add 10.0.99.1/16 dev s777'))
+    info(os.system('ip link set s777 up'))
+
     """
     info( net[ 's06m1' ].cmd( 'python3 as06m1.py &amp' ) )
     info( net[ 's06m2' ].cmd( 'python3 as06m2.py &amp' ) )
