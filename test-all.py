@@ -56,6 +56,10 @@ def emptyNet():
     s53 = net.addSwitch( 's53' )
     """
 
+    s51 = net.addSwitch( 's51' )
+    s52 = net.addSwitch( 's52' )
+    s53 = net.addSwitch( 's53' )
+
     s61 = net.addSwitch( 's61' )
     s62 = net.addSwitch( 's62' )
     s63 = net.addSwitch( 's63' )
@@ -153,6 +157,8 @@ def emptyNet():
     """
 
     # Link siwtch to switch
+    net.addLink(s51,s52)
+    net.addLink(s53,s52)
     net.addLink(s61,s62)
     net.addLink(s63,s62)
     net.addLink(s71,s72)
