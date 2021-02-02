@@ -111,7 +111,7 @@ def emptyNet():
     s02m6 = net.addHost('s02m6', ip='100.2.0.16', cls=CPULimitedHost, cpu=.1)
     s02m7 = net.addHost('s02m7', ip='100.2.0.17', cls=CPULimitedHost, cpu=.1)
     s02m8 = net.addHost('s02m8', ip='100.2.0.18', cls=CPULimitedHost, cpu=.1)
-    s02m9 = net.addHost('s02m8', ip='100.2.0.19', cls=CPULimitedHost, cpu=.1)
+    s02m9 = net.addHost('s02m9', ip='100.2.0.19', cls=CPULimitedHost, cpu=.1)
     s02m10 = net.addHost('s02m10', ip='100.2.0.20', cls=CPULimitedHost, cpu=.1)
     s02cpc = net.addHost('s02cpc', ip='100.2.0.21')
     s02db = net.addHost('s02db', ip='100.2.0.22')
