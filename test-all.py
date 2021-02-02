@@ -100,9 +100,11 @@ def emptyNet():
     s07db = net.addHost('s07db', ip='100.7.0.22')
     s07gw = net.addHost('s07gw', ip='100.7.0.23')
 
-    """
+    
     #Add Host on Substaion 1
     s01m1 = net.addHost('s01m1', ip='100.1.0.11', cls=CPULimitedHost, cpu=.1)
+    s01gw = net.addHost('s01gw', ip='100.1.0.23')
+    """
     s01cpc = net.addHost('s01cpc', ip='100.1.0.21')
     s01db = net.addHost('s01db', ip='100.1.0.22')
     s01gw = net.addHost('s01gw', ip='100.1.0.23')
@@ -235,12 +237,13 @@ def emptyNet():
     net.addLink(s02db,s22)
     net.addLink(s02gw,s21, intfName1='s02gw-eth1', params1={'ip':'100.2.0.23/24'})
 
-    """
+    
     # Link Substation 01 Merging unit to Switch
     net.addLink(s01m1,s13, intfName1='s01m1-eth1', params1={'ip':'100.1.0.11/24'})
+    net.addLink(s01gw,s11, intfName1='s01gw-eth1', params1={'ip':'100.1.0.23/24'})
+    """
     net.addLink(s01cpc,s12)
     net.addLink(s01db,s12)
-    net.addLink(s01gw,s11, intfName1='s01gw-eth1', params1={'ip':'100.1.0.23/24'})
     """
 
     """
@@ -314,11 +317,11 @@ def emptyNet():
     net.addLink(s02m6,s777, intfName1='s02m6-eth0', params1={'ip':'10.0.2.16/16'})
     net.addLink(s02gw,s777, intfName1='s02gw-eth0', params1={'ip':'10.0.2.23/16'})
 
-    """
+    
     # Link Host Substation 1 to switch to external gateway
     net.addLink(s01m1,s777, intfName1='s01m1-eth0', params1={'ip':'10.0.1.11/16'})
     net.addLink(s01gw,s777, intfName1='s01gw-eth0', params1={'ip':'10.0.1.23/16'})
-    """
+    
 
     """
     # Link Host Substation 3 to switch to external gateway
