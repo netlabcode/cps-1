@@ -42,12 +42,13 @@ def emptyNet():
 
     #Switch on Substation
  
+    """
     s11 = net.addSwitch( 's11' )
     s12 = net.addSwitch( 's12' )
     s13 = net.addSwitch( 's13' )
 
 
-    """
+    
     s31 = net.addSwitch( 's31' )
     s32 = net.addSwitch( 's32' )
     s33 = net.addSwitch( 's33' )
@@ -159,13 +160,13 @@ def emptyNet():
     net.addLink(s21,s22)
     net.addLink(s23,s22)
 
-
+    """
     net.addLink(s13,s12)
     net.addLink(s11,s12)
     net.addLink(s13,s12)
  
 
-    """
+ 
     net.addLink(s33,s32)
     net.addLink(s31,s32)
     net.addLink(s33,s32)
@@ -180,11 +181,11 @@ def emptyNet():
     net.addLink(s61,s999)
     net.addLink(s71,s999)
     net.addLink(s21,s999)
-    net.addLink(s11,s999)
+    
     
 
     """
-    
+    net.addLink(s11,s999)
     net.addLink(s31,s999)
     net.addLink(s41,s999)
     net.addLink(s51,s999)
