@@ -37,18 +37,13 @@ def emptyNet():
     #Switch External Gateway
     s777 = net.addSwitch( 's777' )
 
-    #Switch on Control Center
-    s999 = net.addSwitch( 's999' )
-
     #Switch on Substation
- 
-    """
     s11 = net.addSwitch( 's11' )
     s12 = net.addSwitch( 's12' )
     s13 = net.addSwitch( 's13' )
 
 
-    
+    """
     s31 = net.addSwitch( 's31' )
     s32 = net.addSwitch( 's32' )
     s33 = net.addSwitch( 's33' )
@@ -164,13 +159,13 @@ def emptyNet():
     net.addLink(s21,s22)
     net.addLink(s23,s22)
 
-    """
+    
     net.addLink(s13,s12)
     net.addLink(s11,s12)
     net.addLink(s13,s12)
  
 
- 
+    """
     net.addLink(s33,s32)
     net.addLink(s31,s32)
     net.addLink(s33,s32)
@@ -182,18 +177,6 @@ def emptyNet():
     net.addLink(s53,s52)
     """
 
-    net.addLink(s61,s999)
-    net.addLink(s71,s999)
-    net.addLink(s21,s999)
-    
-    
-
-    """
-    net.addLink(s11,s999)
-    net.addLink(s31,s999)
-    net.addLink(s41,s999)
-    net.addLink(s51,s999)
-    """
 
     # Link Substation 06 Merging unit to Switch
     net.addLink(s06m1,s63, intfName1='s06m1-eth1', params1={'ip':'100.6.0.11/24'}, cls=TCLink, bw=0.01 )
