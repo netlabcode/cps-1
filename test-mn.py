@@ -84,6 +84,14 @@ def emptyNet():
 
     #Add Host on Substaion 2
     s02m1 = net.addHost('s02m1', ip='100.2.0.11', cls=CPULimitedHost, cpu=.1)
+    s02m2 = net.addHost('s02m2', ip='100.2.0.12', cls=CPULimitedHost, cpu=.1)
+    s02m3 = net.addHost('s02m3', ip='100.2.0.13', cls=CPULimitedHost, cpu=.1)
+    s02m4 = net.addHost('s02m4', ip='100.2.0.14', cls=CPULimitedHost, cpu=.1)
+    s02m5 = net.addHost('s02m5', ip='100.2.0.15', cls=CPULimitedHost, cpu=.1)
+    s02m6 = net.addHost('s02m6', ip='100.2.0.16', cls=CPULimitedHost, cpu=.1)
+    s02cpc = net.addHost('s02cpc', ip='100.2.0.21')
+    s02db = net.addHost('s02db', ip='100.2.0.22')
+    s02gw = net.addHost('s02gw', ip='100.2.0.23')
 
     # Link siwtch to switch
     net.addLink(s61,s62)
@@ -129,6 +137,14 @@ def emptyNet():
 
     # Link Substation 02 Merging unit to Switch
     net.addLink(s02m1,s23, intfName1='s02m1-eth1', params1={'ip':'100.2.0.11/24'})
+    net.addLink(s02m2,s23, intfName1='s02m2-eth1', params1={'ip':'100.2.0.12/24'})
+    net.addLink(s02m3,s23, intfName1='s02m3-eth1', params1={'ip':'100.2.0.13/24'})
+    net.addLink(s02m4,s23, intfName1='s02m4-eth1', params1={'ip':'100.2.0.14/24'})
+    net.addLink(s02m5,s23, intfName1='s02m5-eth1', params1={'ip':'100.2.0.15/24'})
+    net.addLink(s02m6,s23, intfName1='s02m6-eth1', params1={'ip':'100.2.0.16/24'})
+    net.addLink(s02cpc,s22)
+    net.addLink(s02db,s22)
+    net.addLink(s02gw,s21, intfName1='s02gw-eth1', params1={'ip':'100.2.0.23/24'})
 
     # Link Host Control Center to External gateway
     net.addLink(ccdb,s777, intfName1='ccdb-eth0', params1={'ip':'10.0.0.11/16'})
@@ -158,6 +174,12 @@ def emptyNet():
 
     # Link Host Substation 2 to switch to external gateway
     net.addLink(s02m1,s777, intfName1='s02m1-eth0', params1={'ip':'10.0.2.11/16'})
+    net.addLink(s02m2,s777, intfName1='s02m2-eth0', params1={'ip':'10.0.2.12/16'})
+    net.addLink(s02m3,s777, intfName1='s02m3-eth0', params1={'ip':'10.0.2.13/16'})
+    net.addLink(s02m4,s777, intfName1='s02m4-eth0', params1={'ip':'10.0.2.14/16'})
+    net.addLink(s02m5,s777, intfName1='s02m5-eth0', params1={'ip':'10.0.2.15/16'})
+    net.addLink(s02m6,s777, intfName1='s02m6-eth0', params1={'ip':'10.0.2.16/16'})
+    net.addLink(s02gw,s777, intfName1='s02gw-eth0', params1={'ip':'10.0.2.23/16'})
 
 
     #Build and start Network ============================================================================
