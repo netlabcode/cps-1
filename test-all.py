@@ -100,11 +100,11 @@ def emptyNet():
     s07db = net.addHost('s07db', ip='100.7.0.22')
     s07gw = net.addHost('s07gw', ip='100.7.0.23')
 
-    
+    """
     #Add Host on Substaion 1
     s01m1 = net.addHost('s01m1', ip='100.1.0.11', cls=CPULimitedHost, cpu=.1)
     s01gw = net.addHost('s01gw', ip='100.1.0.23')
-    """
+    
     s01cpc = net.addHost('s01cpc', ip='100.1.0.21')
     s01db = net.addHost('s01db', ip='100.1.0.22')
     s01gw = net.addHost('s01gw', ip='100.1.0.23')
