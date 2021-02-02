@@ -99,6 +99,11 @@ def emptyNet():
     
     #Add Host on Substaion 5
     s05m1 = net.addHost('s05m1', ip='100.5.0.11', cls=CPULimitedHost, cpu=.1)
+    s05m2 = net.addHost('s05m2', ip='100.5.0.12', cls=CPULimitedHost, cpu=.1)
+    s05m3 = net.addHost('s05m3', ip='100.5.0.13', cls=CPULimitedHost, cpu=.1)
+    s05m4 = net.addHost('s05m4', ip='100.5.0.14', cls=CPULimitedHost, cpu=.1)
+    s05m5 = net.addHost('s05m5', ip='100.5.0.15', cls=CPULimitedHost, cpu=.1)
+    s05m6 = net.addHost('s05m6', ip='100.5.0.16', cls=CPULimitedHost, cpu=.1)
     s05gw = net.addHost('s05gw', ip='100.5.0.23')
 
     """
@@ -233,6 +238,11 @@ def emptyNet():
 
     # Link Substation 05 Merging unit to Switch
     net.addLink(s05m1,s53, intfName1='s01m1-eth1', params1={'ip':'100.5.0.11/24'})
+    net.addLink(s05m2,s53, intfName1='s05m2-eth1', params1={'ip':'100.5.0.12/24'})
+    net.addLink(s05m3,s53, intfName1='s05m3-eth1', params1={'ip':'100.5.0.13/24'})
+    net.addLink(s05m4,s53, intfName1='s05m4-eth1', params1={'ip':'100.5.0.14/24'})
+    net.addLink(s05m5,s53, intfName1='s05m5-eth1', params1={'ip':'100.5.0.15/24'})
+    net.addLink(s05m6,s53, intfName1='s05m6-eth1', params1={'ip':'100.5.0.16/24'})
     net.addLink(s05gw,s51, intfName1='s01gw-eth1', params1={'ip':'100.5.0.23/24'})
 
     """
@@ -318,6 +328,11 @@ def emptyNet():
 
     # Link Host Substation 5 to switch to external gateway
     net.addLink(s05m1,s777, intfName1='s05m1-eth0', params1={'ip':'10.0.5.11/16'})
+    net.addLink(s05m2,s777, intfName1='s05m2-eth0', params1={'ip':'10.0.5.12/16'})
+    net.addLink(s05m3,s777, intfName1='s05m3-eth0', params1={'ip':'10.0.5.13/16'})
+    net.addLink(s05m4,s777, intfName1='s05m4-eth0', params1={'ip':'10.0.5.14/16'})
+    net.addLink(s05m5,s777, intfName1='s05m5-eth0', params1={'ip':'10.0.5.15/16'})
+    net.addLink(s05m6,s777, intfName1='s05m6-eth0', params1={'ip':'10.0.5.16/16'})
     net.addLink(s05gw,s777, intfName1='s05gw-eth0', params1={'ip':'10.0.5.23/16'})
 
     """
@@ -370,7 +385,7 @@ def emptyNet():
     info(os.system('ip addr add 10.0.99.1/16 dev s777'))
     info(os.system('ip link set s777 up'))
 
-    
+    """
     info( net[ 's06m1' ].cmd( 'python3 as06m1.py &amp' ) )
     info( net[ 's06m2' ].cmd( 'python3 as06m2.py &amp' ) )
     info( net[ 's06m3' ].cmd( 'python3 as06m3.py &amp' ) )
@@ -399,6 +414,7 @@ def emptyNet():
     info( net[ 's02m8' ].cmd( 'python3 as07m8.py &amp' ) )
     info( net[ 's02m9' ].cmd( 'python3 as07m9.py &amp' ) )
     info( net[ 's02m10' ].cmd( 'python3 as07m10.py &amp' ) )
+    """
     
  
     
