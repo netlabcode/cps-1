@@ -237,11 +237,11 @@ def emptyNet():
     net.addLink(s02db,s22)
     net.addLink(s02gw,s21, intfName1='s02gw-eth1', params1={'ip':'100.2.0.23/24'})
 
-    
+    """
     # Link Substation 01 Merging unit to Switch
     net.addLink(s01m1,s13, intfName1='s01m1-eth1', params1={'ip':'100.1.0.11/24'})
     net.addLink(s01gw,s11, intfName1='s01gw-eth1', params1={'ip':'100.1.0.23/24'})
-    """
+    
     net.addLink(s01cpc,s12)
     net.addLink(s01db,s12)
     """
@@ -317,13 +317,13 @@ def emptyNet():
     net.addLink(s02m6,s777, intfName1='s02m6-eth0', params1={'ip':'10.0.2.16/16'})
     net.addLink(s02gw,s777, intfName1='s02gw-eth0', params1={'ip':'10.0.2.23/16'})
 
-    
+    """
     # Link Host Substation 1 to switch to external gateway
     net.addLink(s01m1,s777, intfName1='s01m1-eth0', params1={'ip':'10.0.1.11/16'})
     net.addLink(s01gw,s777, intfName1='s01gw-eth0', params1={'ip':'10.0.1.23/16'})
     
 
-    """
+    
     # Link Host Substation 3 to switch to external gateway
     net.addLink(s03m1,s777, intfName1='s03m1-eth0', params1={'ip':'10.0.3.11/16'})
     net.addLink(s03m2,s777, intfName1='s03m2-eth0', params1={'ip':'10.0.3.12/16'})
