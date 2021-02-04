@@ -26,7 +26,8 @@ db_version = cursor.execute('SELECT version()')
 one_query = "SELECT * from s06m1"
 
 cursor.execute(one_query)
-one_record = cursor.fetch(1)
+one_record = cursor.fetchone()
+
 
 print(one_record[0])
 
