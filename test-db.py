@@ -20,12 +20,13 @@ PORTS2 = 883
 #Database Connection
 conn = psycopg2.connect(host="131.180.165.5",database="crpg", user="postgres", password="crpg")
 conn.autocommit = True
-
-if conn is not None:
-    print('Connection established to PostgreSQL.')
-else:
-    print('Connection not established to PostgreSQL.')
-
 cursor = conn.cursor()
 db_version = cursor.execute('SELECT version()')
-print(db_version)
+
+one_query = "SELECT * from s06m1"
+
+cursor.execute(one_query)
+one_record = cursor.fetch(1)
+
+print(one_record[0])
+
