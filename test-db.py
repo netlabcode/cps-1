@@ -30,4 +30,5 @@ for x in range(5):
     cursor.execute(one_query)
     one_record = cursor.fetchone()
     print(one_record[2])
+    time.sleep(1000)
 
