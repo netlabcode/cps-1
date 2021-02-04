@@ -23,7 +23,7 @@ conn.autocommit = True
 cursor = conn.cursor()
 db_version = cursor.execute('SELECT version()')
 
-one_query = "SELECT * from s06m1"
+one_query = "SELECT * from s07m10 ORDER BY no"
 
 cursor.execute(one_query)
 one_record = cursor.fetchone()
