@@ -25,9 +25,9 @@ db_version = cursor.execute('SELECT version()')
 
 one_query = "SELECT * from s07m10 ORDER BY no DESC"
 
-cursor.execute(one_query)
-one_record = cursor.fetchone()
-
-
-print(one_record)
+x = 0
+for x in range(5):
+    cursor.execute(one_query)
+    one_record = cursor.fetchone()
+    print(one_record[2])
 
