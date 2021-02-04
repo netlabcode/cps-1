@@ -30,5 +30,6 @@ while x <= 5:
     cursor.execute(one_query)
     one_record = cursor.fetchone()
     print(one_record[2])
+    print(one_record[3])
     time.sleep(2)
 

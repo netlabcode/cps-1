@@ -23,4 +23,4 @@ conn.autocommit = True
 cursor = conn.cursor()
 db_version = cursor.execute('SELECT version()')
 
-cursor.execute(" INSERT INTO s07m1(cb_ctrl, cb_res) VALUES (1,0)")
+cursor.execute(" INSERT INTO s07m1(cb_ctrl, cb_res) VALUES (3,2)")
