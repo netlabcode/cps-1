@@ -29,5 +29,5 @@ cursor.execute(one_query)
 one_record = cursor.fetchone()
 
 
-print(one_record[0])
+print(one_record)
 
