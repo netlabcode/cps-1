@@ -44,13 +44,22 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     conn, addr = s.accept()
     with conn:
         print('Connected by', addr)
+        cursor.execute(one_query)
+        one_record = cursor.fetchone()
+        init = one_record[0]
+
         while True:
             cursor.execute(one_query)
             one_record = cursor.fetchone()
-            d = str(one_record[1])
-            data = d.encode()
-            conn.sendall(data)
-            time.sleep(2)
+            now = one_record[0]
+            if now !=  init:
+                d = str(one_record[1])
+                data = d.encode()
+                conn.sendall(data)
+                time.sleep(1)
+                init = now
+
+
 
 
 
