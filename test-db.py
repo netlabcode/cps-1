@@ -34,23 +34,21 @@ while x <= 5:
     print(one_record[3])
     time.sleep(2)
 """
-HOST = '131.180.165.26'
+HOST = '127.0.0.1'
 PORT = 999
 
-with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s1:
-    s1.bind((HOST,PORT))
-    s1.listen()
-    conn, addr = s1.accept()
-    with conn:
-        print('S1 from:',addr)
-        while True:
-            b = 1
-            while b < 6:
-                data = '1'
-                data2 = data.encode()
-                s1.sendall(data2)
-                time.sleep(3)
 
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+    s.bind((HOST, PORT))
+    s.listen()
+    conn, addr = s.accept()
+    with conn:
+        print('Connected by', addr)
+        while True:
+            d = '123'
+            data = d.encode()
+            conn.sendall(data)
+            time.sleep(3)
 
 
 
