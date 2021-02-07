@@ -30,6 +30,9 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
                 sx1.sendall(fill)
             else:
                 print('else')
+                fill = "219+"+data
+                fill = fill.encode()
+                sx1.sendall(fill)
 
 
         print('Receive',repr(data))

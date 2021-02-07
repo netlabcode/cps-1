@@ -23,7 +23,7 @@ conn.autocommit = True
 cursor = conn.cursor()
 db_version = cursor.execute('SELECT version()')
 
-one_query = "SELECT * from s07m10 ORDER BY no DESC"
+one_query = "SELECT * from ctl_record ORDER BY no DESC"
 
 """
 x = 0
@@ -47,7 +47,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         while True:
             cursor.execute(one_query)
             one_record = cursor.fetchone()
-            d = str(one_record[2])
+            d = str(one_record[1])
             data = d.encode()
             conn.sendall(data)
             time.sleep(2)
