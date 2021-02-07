@@ -175,6 +175,8 @@ def emptyNet():
     info( net[ 's07m9' ].cmd( 'python3 as07m9.py &amp' ) )
     info( net[ 's07m10' ].cmd( 'python3 as07m10.py &amp' ) )
     """
+
+    info( net[ 's06m2' ].cmd( 'python3 as06m2.py &amp' ) )
     
  
     
