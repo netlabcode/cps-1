@@ -34,21 +34,24 @@ while x <= 5:
     print(one_record[3])
     time.sleep(2)
 """
-HOST = '127.0.0.1'
+HOST = ''
 PORT = 999
 
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-    s.bind(('', PORT))
+    s.bind((HOST, PORT))
     s.listen()
     conn, addr = s.accept()
     with conn:
         print('Connected by', addr)
         while True:
-            d = '123'
+            cursor.execute(one_query)
+            one_record = cursor.fetchone()
+            d = one_record[2]
             data = d.encode()
             conn.sendall(data)
             time.sleep(3)
+
 
 
 
