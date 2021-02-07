@@ -34,7 +34,7 @@ while x <= 5:
     print(one_record[3])
     time.sleep(2)
 """
-HOST = '127.0.0.1'
+HOST = '131.180.165.26'
 PORT = 999
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s1:
