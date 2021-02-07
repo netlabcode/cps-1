@@ -17,5 +17,13 @@ def serverOne():
             data1new = data1.decode("utf-8")
             print(data1new)
 
+# Create two threads as follows
+try:
+   _thread.start_new_thread( serverOne, ( ) )
+   #_thread.start_new_thread( serverTwo, ( ) )
+except:
+   print ("Error: unable to start thread")
 
+while 1:
+   pass
 
