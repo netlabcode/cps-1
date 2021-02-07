@@ -5,7 +5,7 @@ import socket
 import datetime
 
 HOST2 = '131.180.165.26'
-PORT1 = 999
+PORT1 = 80
 
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
