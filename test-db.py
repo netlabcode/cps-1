@@ -35,11 +35,11 @@ while x <= 5:
     time.sleep(2)
 """
 HOST = '127.0.0.1'
-PORT = 80
+PORT = 999
 
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-    s.bind((HOST, PORT))
+    s.bind(('', PORT))
     s.listen()
     conn, addr = s.accept()
     with conn:
