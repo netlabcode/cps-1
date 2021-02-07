@@ -20,6 +20,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
 
     while True:
         data = s.recv(1024)
+        data = data.decode("utf-8")
         data = str(data)
 
         if data == '2':
