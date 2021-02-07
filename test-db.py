@@ -47,7 +47,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         while True:
             cursor.execute(one_query)
             one_record = cursor.fetchone()
-            d = one_record[2]
+            d = str(one_record[2])
             data = d.encode()
             conn.sendall(data)
             time.sleep(3)
