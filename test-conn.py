@@ -25,6 +25,9 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
 
             if data == '2':
                 print(2)
+                fill = '219+2'
+                fill = fill.encode()
+                sx1.sendall(fill)
             else:
                 print('else')
 
