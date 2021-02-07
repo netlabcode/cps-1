@@ -50,7 +50,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             d = str(one_record[2])
             data = d.encode()
             conn.sendall(data)
-            time.sleep(3)
+            time.sleep(2)
 
 
 
