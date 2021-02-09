@@ -196,7 +196,7 @@ def emptyNet():
     info(os.system('ip addr add 10.0.99.1/16 dev s777'))
     info(os.system('ip link set s777 up'))
 
-    """
+    
     info( net[ 's06m1' ].cmd( 'python3 as06m1.py &amp' ) )
     info( net[ 's06m2' ].cmd( 'python3 as06m2.py &amp' ) )
     info( net[ 's06m3' ].cmd( 'python3 as06m3.py &amp' ) )
@@ -214,7 +214,7 @@ def emptyNet():
     info( net[ 's07m8' ].cmd( 'python3 as07m8.py &amp' ) )
     info( net[ 's07m9' ].cmd( 'python3 as07m9.py &amp' ) )
     info( net[ 's07m10' ].cmd( 'python3 as07m10.py &amp' ) )
-    """
+    
  
     
  
