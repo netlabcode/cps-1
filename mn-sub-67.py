@@ -156,7 +156,7 @@ def emptyNet():
     nat = net.get('nat0')
     nat.cmdPrint('ip link set mtu 1454 dev nat0-eth0')
 
-    """
+    
     info( net[ 's06m1' ].cmd( 'python3 as06m1.py &amp' ) )
     info( net[ 's06m2' ].cmd( 'python3 as06m2.py &amp' ) )
     info( net[ 's06m3' ].cmd( 'python3 as06m3.py &amp' ) )
@@ -174,9 +174,7 @@ def emptyNet():
     info( net[ 's07m8' ].cmd( 'python3 as07m8.py &amp' ) )
     info( net[ 's07m9' ].cmd( 'python3 as07m9.py &amp' ) )
     info( net[ 's07m10' ].cmd( 'python3 as07m10.py &amp' ) )
-    """
-
-    info( net[ 's06m2' ].cmd( 'python3 as06m2.py &amp' ) )
+    
     
  
     
