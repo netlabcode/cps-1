@@ -131,7 +131,7 @@ def emptyNet():
     net.addLink(s04m6,s43, intfName1='s04m6-eth1', params1={'ip':'100.4.0.16/24'})
     net.addLink(s04m7,s43, intfName1='s04m7-eth1', params1={'ip':'100.4.0.17/24'})
     net.addLink(s04m8,s43, intfName1='s04m8-eth1', params1={'ip':'100.4.0.14/24'})
-    net.addLink(s04m9,s43, intfName1='s04m4-eth1', params1={'ip':'100.4.0.19/24'})  
+    net.addLink(s04m9,s43, intfName1='s04m9-eth1', params1={'ip':'100.4.0.19/24'})  
     net.addLink(s04cpc,s42)
     net.addLink(s04db,s42)
     net.addLink(s04gw,s41, intfName1='s04gw-eth1', params1={'ip':'100.4.0.23/24'})
@@ -172,7 +172,7 @@ def emptyNet():
     net.addLink(s04m6,s777, intfName1='s04m6-eth0', params1={'ip':'10.0.4.16/16'})
     net.addLink(s04m7,s777, intfName1='s04m7-eth0', params1={'ip':'10.0.4.17/16'})
     net.addLink(s04m8,s777, intfName1='s04m8-eth0', params1={'ip':'10.0.4.18/16'})
-    net.addLink(s04m9,s777, intfName1='s04m4-eth0', params1={'ip':'10.0.4.19/16'})
+    net.addLink(s04m9,s777, intfName1='s04m9-eth0', params1={'ip':'10.0.4.19/16'})
     net.addLink(s04gw,s777, intfName1='s04gw-eth0', params1={'ip':'10.0.4.23/16'})
     
     # Link Host Substation 10 to switch to external gateway
