@@ -62,8 +62,8 @@ def emptyNet():
     # Add host-switch links in the same subnet
     net.addLink(s999, r0, intfName2='r0-eth1', params2={'ip': '100.0.0.1/16'})
     net.addLink(s91, r9, intfName2='r9-eth1', params2={'ip': '100.9.0.1/16'})
-    net.addLink(s181, r10, intfName2='r18-eth1', params2={'ip': '100.18.0.1/16'})
-    net.addLink(s231, r11, intfName2='r23-eth1', params2={'ip': '100.23.0.1/16'})
+    net.addLink(s181, r18, intfName2='r18-eth1', params2={'ip': '100.18.0.1/16'})
+    net.addLink(s231, r23, intfName2='r23-eth1', params2={'ip': '100.23.0.1/16'})
 
      # Add router-router link in a new subnet for the router-router connection
     net.addLink(r0, r9, intfName1='r0-eth3', intfName2='r9-eth2', params1={'ip': '200.9.0.1/24'}, params2={'ip': '200.9.0.2/24'})
