@@ -57,7 +57,7 @@ def emptyNet():
     s83 = net.addSwitch( 's83' )
     s171 = net.addSwitch( 's171' )
     s172 = net.addSwitch( 's172' )
-    s172 = net.addSwitch( 's173' )
+    s173 = net.addSwitch( 's173' )
 
     # Add host-switch links in the same subnet
     net.addLink(s999, r0, intfName2='r0-eth1', params2={'ip': '100.0.0.1/16'})
